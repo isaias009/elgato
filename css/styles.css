@@ -1,0 +1,183 @@
+body {
+    background-color: #2f3241;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(0,0,0, 0.4);
+}
+
+.tabla {
+    border-collapse: collapse;
+    margin:auto;
+    position: relative;
+    /* opacity: 0.6; */
+}
+
+.tabla .fa-xmark {
+    font-size: 70px;
+    color: #2f3241;
+}
+
+.tabla:hover{
+    opacity: 1;
+}
+
+
+.tabla--columna {
+    width: 80px;
+    height: 80px;
+    border: solid 4px rgba(0,0,0, 0.2);
+    background-color: #14bdac;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    transform: ease 1s all;
+    font-size: 55px;
+}
+
+#content--fila2 .tabla--columna {
+    width: 70px;
+    height: 70px;
+}
+
+#content--fila4 .tabla--columna,
+#content--fila3 .tabla--columna {
+    width: 60px;
+    height: 60px;
+    font-size: 45px;
+}
+
+#content--fila4 .tabla--columna .fa-xmark,
+#content--fila3 .tabla--columna .fa-xmark{
+    font-size: 55px;
+}
+
+
+#content--fila1 {position: relative;}
+
+#content--fila2,
+#content--fila3,
+#content--fila4{
+    width: 100%;
+    display: none;
+    margin-top: 100px;
+    position: relative;
+}
+
+
+.content--btn {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    border-radius: 50%;
+    margin-top: 10px;
+    border: solid 2px rgba(0,0,0, 0.5);
+    cursor: pointer;
+}
+
+
+
+#btn-fila2,
+#btn-fila3,
+#btn-fila4 {
+    display: none;
+}
+
+
+
+/* --- Flechas --- */
+#content--fila2 .tabla::before,
+#content--fila4 .tabla::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background-color: rgba(255,255,255, 0.8);
+    top: -90px;
+    left: calc(50% - 5px);
+    border-radius: 5px;
+}
+
+#content--fila2 .tabla:first-child:before,
+#content--fila2 .tabla:last-child:before {
+    transform: rotate(70deg);
+    height: 300px;
+    top: -200px;
+    left: 400px;
+}
+
+#content--fila2 .tabla:last-child:before {
+    transform: rotate(-70deg);
+    left: -200px;
+}
+
+
+
+#content--fila3 .tabla::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 100px;
+    background-color: rgba(255,255,255, 0.8);
+    top: -100px;
+    left: 180px;
+    border-radius: 5px;
+    transform: rotate(40deg);
+}
+
+#content--fila3 .tabla:nth-child(even):before{
+    left: 0px;
+    transform: rotate(-40deg);
+}
+
+
+
+
+.inputs{
+    display: none;
+    position: absolute;
+    width: 1600px;
+    justify-content: space-between;
+
+    left: calc(50% - 800px);
+    z-index: 3;
+}
+
+.inputs input{
+    width: 60px;
+    height: 60px;
+    border: none;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 5px;
+    background: white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.inputs input:focus{
+    border: none;
+    outline: none;
+}
+
+.content--input1{
+    left: calc(50% - 32px);
+}
+
+.content--input2 {
+    width: 1300px;
+    left: calc(50% - 650px);
+}
